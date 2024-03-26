@@ -1,11 +1,13 @@
 tap "cloudflare/cloudflare"
 tap "homebrew/bundle"
+tap "localsend/localsend"
 tap "powershell/tap"
-tap "tabbyml/tabby"
+# Decentralized dependency manager for Cocoa
+brew "carthage"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Python code formatter
-brew "black"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # Dependency manager for Cocoa projects
 brew "cocoapods"
 # GNU File, Shell, and Text utilities
@@ -22,26 +24,28 @@ brew "glow"
 brew "htop"
 # Simple terminal UI for git commands
 brew "lazygit"
-# Building blocks for modern adaptive GNOME applications
-brew "libadwaita"
 # Fast, highly customisable system info script
 brew "neofetch"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Manage compile and link flags for libraries
 brew "pkg-config"
-# Cross-platform application and UI framework
-brew "qt@5"
 # SMART hard drive monitoring
 brew "smartmontools"
+# Cross-shell prompt for astronauts
+brew "starship"
 # Formatting technology for Swift source code
 brew "swift-format"
 # Formatting tool for reformatting Swift code
 brew "swiftformat"
 # Tool to enforce Swift style and conventions
 brew "swiftlint"
+# User interface to the TELNET protocol
+brew "telnet"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
@@ -54,30 +58,32 @@ brew "watch"
 brew "wget"
 # Little beautifier tool for xcodebuild
 brew "xcbeautify"
+# Generate your Xcode project from a spec file and your folder structure
+brew "xcodegen"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
-# Cloudflare Tunnel
-brew "cloudflare/cloudflare/cloudflared"
 # Formula to install PowerShell
-brew "powershell/tap/powershell", link: false
-# Tabby: AI Coding Assitatnt
-brew "tabbyml/tabby/tabby"
+brew "powershell/tap/powershell"
+# GPU-accelerated terminal emulator
+cask "alacritty"
 # Enable Windows-like alt-tab
 cask "alt-tab"
-# Family of tools to build, test and package software
-cask "cmake"
+# Server and cloud storage browser
+cask "cyberduck"
 # Universal database tool and SQL client
 cask "dbeaver-community"
 # Web browser
 cask "firefox"
 # Git client focusing on productivity
 cask "gitkraken"
+# Web browser
+cask "google-chrome"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # GPU-based terminal emulator
 cask "kitty"
-# Free cross-platform office suite, fresh version
-cask "libreoffice"
+# An open source cross-platform alternative to AirDrop
+cask "localsend"
 # Finder Toolbar app to open the current directory in Editor
 cask "openineditor-lite"
 # Finder Toolbar app to open the current directory in Terminal
@@ -96,8 +102,6 @@ cask "tabby"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
-# View output from scripts in the menu bar
-cask "xbar"
 # Install and switch between multiple versions of Xcode
 cask "xcodes"
 # Multiplayer code editor

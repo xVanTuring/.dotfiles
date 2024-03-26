@@ -1,7 +1,15 @@
 [https]
-	proxy = http://192.168.1.7:7890
+	proxy = http://thinker.local:7890
 [http]
-	proxy = http://192.168.1.7:7890
+	proxy = http://thinker.local:7890
 [user]
 	name = xVanTuring
 	email = xVanTuring@foxmail.com
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[init]
+	defaultBranch = master

@@ -70,7 +70,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git rust xcode)
+plugins=(git rust xcode poetry history screen)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -100,18 +100,24 @@ export EDITOR='lvim'
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-
-# export https_proxy='http://192.168.1.7:7890'
-# export http_proxy='http://192.168.1.7:7890'
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-# test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 export PATH="$PATH:/Users/xvan/Tools/flutter/bin/"
 
-alias neovide=~/.local/bin/neovide
-alias findps="ps -ef | grep"
 eval "$(zoxide init zsh)"
+eval "$(starship init zsh)"
 
+alias ls="eza"
+alias cd="z"
+
+if type brew &>/dev/null
+then
+  FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
+  autoload -Uz compinit
+  compinit
+fi
+
+eval "$(~/.local/bin/mise activate zsh)"

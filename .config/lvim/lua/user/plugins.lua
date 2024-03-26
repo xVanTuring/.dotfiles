@@ -118,40 +118,20 @@ lvim.plugins = {
     end,
   },
   {
-    dir = "/Users/xvan/Documents/Project/xbase",
-    build = 'make install',
+    "wojciech-kulik/xcodebuild.nvim",
     dependencies = {
-      'neovim/nvim-lspconfig',
+      "nvim-telescope/telescope.nvim",
+      "MunifTanjim/nui.nvim",
+      "nvim-tree/nvim-tree.lua",       -- (optional) to manage project files
+      "stevearc/oil.nvim",             -- (optional) to manage project files
+      "nvim-treesitter/nvim-treesitter", -- (optional) for Quick tests support (required Swift parser)
     },
-    lazy = false,
     config = function()
-      require("xbase").setup({
-        simctl = {
-          iOS = {
-            "iPhone 15 Pro", --- only use this devices
-          },
-          watchOS = {},      -- all available devices
-          tvOS = {},         -- all available devices
-        },
-        mappings = {
-          --- Whether xbase mapping should be disabled.
-          enable = false,
-        }
+      require("xcodebuild").setup({
+        -- put some options here or leave it empty to use default settings
       })
-    end
+    end,
   },
-  -- {
-  --   "wojciech-kulik/xcodebuild.nvim",
-  --   dependencies = {
-  --     "nvim-telescope/telescope.nvim",
-  --     "MunifTanjim/nui.nvim",
-  --   },
-  --   config = function()
-  --     require("xcodebuild").setup({
-  --       -- put some options here or leave it empty to use default settings
-  --     })
-  --   end,
-  -- },
   -- {
   --   "tpope/vim-surround",
   --   config = function ()
