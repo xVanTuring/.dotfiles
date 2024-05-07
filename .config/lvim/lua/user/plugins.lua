@@ -34,15 +34,15 @@ lvim.plugins = {
       vim.api.nvim_set_keymap('n', 'g#', [[g#<Cmd>lua require('hlslens').start()<CR>]], kopts)
     end
   },
-  {
-    'wfxr/minimap.vim',
-    build = "cargo install --locked code-minimap",
-    cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
-    config = function()
-      vim.g.minimap_highlight_search = 1
-      vim.g.minimap_git_colors = 1
-    end,
-  },
+  -- {
+  --   'wfxr/minimap.vim',
+  --   build = "cargo install --locked code-minimap",
+  --   cmd = { "Minimap", "MinimapClose", "MinimapToggle", "MinimapRefresh", "MinimapUpdateHighlight" },
+  --   config = function()
+  --     vim.g.minimap_highlight_search = 1
+  --     vim.g.minimap_git_colors = 1
+  --   end,
+  -- },
   {
     "nacro90/numb.nvim",
     event = "BufRead",
@@ -53,10 +53,10 @@ lvim.plugins = {
       }
     end,
   },
-  {
-    "sindrets/diffview.nvim",
-    event = "BufRead",
-  },
+  -- {
+  --   "sindrets/diffview.nvim",
+  --   event = "BufRead",
+  -- },
   {
     "f-person/git-blame.nvim",
     event = "BufRead",
@@ -117,21 +117,21 @@ lvim.plugins = {
       }
     end,
   },
-  {
-    "wojciech-kulik/xcodebuild.nvim",
-    dependencies = {
-      "nvim-telescope/telescope.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-tree.lua",       -- (optional) to manage project files
-      "stevearc/oil.nvim",             -- (optional) to manage project files
-      "nvim-treesitter/nvim-treesitter", -- (optional) for Quick tests support (required Swift parser)
-    },
-    config = function()
-      require("xcodebuild").setup({
-        -- put some options here or leave it empty to use default settings
-      })
-    end,
-  },
+  -- {
+  --   "wojciech-kulik/xcodebuild.nvim",
+  --   dependencies = {
+  --     "nvim-telescope/telescope.nvim",
+  --     "MunifTanjim/nui.nvim",
+  --     "nvim-tree/nvim-tree.lua",       -- (optional) to manage project files
+  --     "stevearc/oil.nvim",             -- (optional) to manage project files
+  --     "nvim-treesitter/nvim-treesitter", -- (optional) for Quick tests support (required Swift parser)
+  --   },
+  --   config = function()
+  --     require("xcodebuild").setup({
+  --       -- put some options here or leave it empty to use default settings
+  --     })
+  --   end,
+  -- },
   -- {
   --   "tpope/vim-surround",
   --   config = function ()

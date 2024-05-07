@@ -15,4 +15,4 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 
 # Link existing config
-./link.sh
+# ./link.sh

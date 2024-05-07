@@ -21,3 +21,8 @@ vim.opt.guifont = "JetBrainsMono Nerd Font:h13"
 lvim.builtin.telescope.defaults.layout_config = {
   preview_cutoff = 10
 }
+vim.filetype.add({
+  extension = {
+    ASM = "asm",
+  },
+})

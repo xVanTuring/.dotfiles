@@ -104,7 +104,6 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-export PATH="$PATH:/Users/xvan/Tools/flutter/bin/"
 
 eval "$(zoxide init zsh)"
 eval "$(starship init zsh)"
@@ -121,3 +120,12 @@ then
 fi
 
 eval "$(~/.local/bin/mise activate zsh)"
+alias s="kitten ssh"
+alias vim="/opt/homebrew/bin/nvim"
+
+
+## [Completion]
+## Completion scripts setup. Remove the following line to uninstall
+[[ -f /Users/xvan/.dart-cli-completion/zsh-config.zsh ]] && . /Users/xvan/.dart-cli-completion/zsh-config.zsh || true
+## [/Completion]
+

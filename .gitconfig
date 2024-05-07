@@ -1,7 +1,3 @@
-[https]
-	proxy = http://thinker.local:7890
-[http]
-	proxy = http://thinker.local:7890
 [user]
 	name = xVanTuring
 	email = xVanTuring@foxmail.com
